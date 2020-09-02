@@ -1,0 +1,24 @@
+$break-small: 300px;
+$break-middle: 475;
+$break-large: 1024px;
+$break-extralarge: 1536px;
+
+@mixin respond-to($media) {
+    @if $media == handhelds {
+        @media only screen and (min-width: $break-small) and (max-width: $break-middle - 1px){
+            @content;
+        }
+    }@else if $media == mid-screens{
+        @media only screen and (min-width: $break-small + 1px) and (max-width: $break-large - 1px){
+            @content;
+    }
+}@else if $media == wide-screens{
+    @media only screen and (min-width: $break-large){
+        @content;
+}
+}@else if $media ==xwide-screens{
+    @media only screen and (min-width: $break-){
+        @content;
+}
+}
+}
